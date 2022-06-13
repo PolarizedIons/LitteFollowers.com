@@ -1,0 +1,121 @@
+html,
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+    background: #cfcfcf;
+    color: #333;
+    font-size: 16px;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 4rem 0;
+}
+
+h1,
+h2 {
+    margin: 10px 0;
+    font-weight: 100;
+}
+
+h1 {
+    font-size: 3.5rem;
+}
+
+h2 {
+    font-size: 2.4rem;
+    font-style: italic;
+    width: fit-content;
+}
+
+.underline-anim {
+    width: 100%;
+    height: 2px;
+    overflow: hidden;
+    display: block;
+
+    background: linear-gradient(90deg, #cfcfcf -50px, #883db5 -50px, #883db5 50px, #cfcfcf 50px);
+    background-size: 200% 200%;
+    animation: underline-anim 1.5s linear infinite;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.card {
+    background: #afafaf;
+    padding: 1rem 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card img {
+    max-width: 10rem;
+}
+
+
+.card:not(.contact) {
+    border-radius: 2rem;
+    box-shadow: 3px 5px #888888;
+}
+
+.card .follower-count {
+    font-size: 2rem;
+    font-weight: 100;
+    margin: 1rem 0;
+}
+
+.card .follower-count .amount {
+    font-weight: 400;
+}
+
+.card .button {
+    font-size: 2rem;
+    background: #883db5;
+    color: #efefef;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    max-width: fit-content;
+    cursor: pointer;
+    transition: all 50ms ease-in-out;
+    user-select: none;
+}
+
+.card .button:hover {
+    background: #6e2a95;
+}
+
+.card.contact {
+    margin-top: 5rem;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+footer a {
+    text-decoration: none;
+    color: #000;
+}
+
+@keyframes underline-anim {
+    0% {
+        background-position: calc(0% - 100px) 50%;
+    }
+
+    100% {
+        background-position: -100% 50%;
+    }
+}
